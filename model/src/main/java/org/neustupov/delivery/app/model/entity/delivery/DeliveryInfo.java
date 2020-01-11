@@ -1,4 +1,4 @@
-package org.neustupov.delivery.app.model.entity.order;
+package org.neustupov.delivery.app.model.entity.delivery;
 
 import java.time.LocalDateTime;
 import lombok.Data;
@@ -9,5 +9,8 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 @EqualsAndHashCode(callSuper=true)
 public class DeliveryInfo extends AbstractEntity {
 
+  private Long consumerId;
+  private Courier courier;
   private LocalDateTime deliveryTime;
+  private Address address;
 }

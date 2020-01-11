@@ -9,4 +9,5 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 public class Courier extends AbstractEntity {
 
   private boolean available;
+  private Long locationId;
 }

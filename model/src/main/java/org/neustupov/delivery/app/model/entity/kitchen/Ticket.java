@@ -1,6 +1,7 @@
 package org.neustupov.delivery.app.model.entity.kitchen;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
@@ -9,7 +10,8 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 @EqualsAndHashCode(callSuper = true)
 public class Ticket extends AbstractEntity {
 
-  private int statusId;
+  private Long statusId;
   private LocalDateTime requestedDeliveryTime;
   private LocalDateTime preparedByTime;
+  private Set<TicketLineItem> ticketLineItems;
 }

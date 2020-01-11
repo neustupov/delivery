@@ -8,5 +8,5 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 @EqualsAndHashCode(callSuper = true)
 public class Status extends AbstractEntity {
 
-  private int statusId;
+  private String status;
 }

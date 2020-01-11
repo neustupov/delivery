@@ -9,4 +9,5 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 public class OrderLineItem extends AbstractEntity {
 
   private int quantity;
+  private String name;
 }
