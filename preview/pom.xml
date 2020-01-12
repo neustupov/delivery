@@ -15,4 +15,26 @@
     <java.version>1.8</java.version>
   </properties>
 
+  <dependencies>
+    <!-- spring-context -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.2.2.RELEASE</version>
+    </dependency>
+
+    <!-- spring-data-rest-webmvc -->
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-rest-webmvc</artifactId>
+      <version>3.2.3.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ru.neustupov</groupId>
+      <artifactId>service</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
 </project>
