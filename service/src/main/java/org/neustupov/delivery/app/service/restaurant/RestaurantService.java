@@ -1,7 +1,6 @@
 package org.neustupov.delivery.app.service.restaurant;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import org.neustupov.delivery.app.model.entity.restaurant.Restaurant;
 import org.neustupov.delivery.app.repository.restaurant.RestaurantRepository;
