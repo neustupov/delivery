@@ -3,11 +3,17 @@ package org.neustupov.delivery.app.model.entity.kitchen;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
+import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 
 @Data
+@NoArgsConstructor
+@Entity
+@MappedSuperclass
 @EqualsAndHashCode(callSuper = true)
 public class Ticket extends AbstractEntity {
 
