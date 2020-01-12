@@ -15,18 +15,4 @@
     <java.version>1.8</java.version>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-core</artifactId>
-      <version>5.4.10.Final</version>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.4.0</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
 </project>

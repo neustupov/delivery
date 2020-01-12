@@ -3,7 +3,6 @@ package org.neustupov.delivery.app.service.restaurant;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.HashSet;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
