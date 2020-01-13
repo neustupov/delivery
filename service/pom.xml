@@ -12,6 +12,12 @@
   <artifactId>service</artifactId>
 
   <dependencies>
+    <!-- spring-context -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.2.2.RELEASE</version>
+    </dependency>
     <dependency>
       <groupId>ru.neustupov</groupId>
       <artifactId>repository</artifactId>

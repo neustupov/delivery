@@ -16,6 +16,12 @@
   </properties>
 
   <dependencies>
+    <!-- spring-context -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.2.2.RELEASE</version>
+    </dependency>
     <!-- spring-data-jpa -->
     <dependency>
       <groupId>org.springframework.data</groupId>
