@@ -1,14 +1,20 @@
 package org.neustupov.delivery.app.repository.restaurant;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import org.neustupov.delivery.app.model.entity.restaurant.MenuItem;
 import org.neustupov.delivery.app.model.entity.restaurant.Restaurant;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class RestaurantRepositoryImpl implements RestaurantRepository {
 
+  @Lazy
   @Autowired
   private RestaurantRepository restaurantRepository;
 
@@ -39,7 +45,7 @@ public class RestaurantRepositoryImpl implements RestaurantRepository {
 
   @Override
   public Iterable<Restaurant> findAll() {
-    return null;
+    return Arrays.asList(new Restaurant("Ararat", 1L, new HashSet<>()));
   }
 
   @Override

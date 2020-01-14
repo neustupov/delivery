@@ -5,11 +5,13 @@ import java.util.List;
 import org.neustupov.delivery.app.model.entity.restaurant.Restaurant;
 import org.neustupov.delivery.app.repository.restaurant.RestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 @Service
 public class RestaurantService {
 
+  @Lazy
   @Autowired
   private RestaurantRepository restaurantRepository;
 
