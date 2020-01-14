@@ -9,7 +9,7 @@ class TicketTest {
   @Test
   void addTicket() {
     Ticket ticket = new Ticket();
-    TicketLineItem ticketLineItem = new TicketLineItem(1, "apple");
+    TicketLineItem ticketLineItem = new TicketLineItem(1, "apple", new Ticket());
     ticket.addTicket(ticketLineItem);
     assertTrue(containsTicketLineItem(ticket, ticketLineItem));
   }

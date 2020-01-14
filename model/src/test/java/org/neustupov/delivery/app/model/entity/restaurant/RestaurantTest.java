@@ -9,7 +9,7 @@ class RestaurantTest {
   @Test
   void addMenuItem() {
 
-    MenuItem menuItem = new MenuItem("apple", 1);
+    MenuItem menuItem = new MenuItem("apple", 1, new Restaurant());
     Restaurant restaurant = new Restaurant();
     restaurant.addMenuItem(menuItem);
     assertTrue(containsMenuItem(restaurant, menuItem));

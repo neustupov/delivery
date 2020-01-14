@@ -18,7 +18,7 @@ class RestaurantServiceTest {
 
   @Test
   void save() {
-    Restaurant restaurant = new Restaurant("Ararat", 1L, new HashSet<>());
+    Restaurant restaurant = new Restaurant();
     restaurantRepository.save(restaurant);
     System.out.print(restaurantRepository.findAll());
   }
