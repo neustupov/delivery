@@ -25,6 +25,6 @@ public class TicketLineItem extends AbstractEntity {
   private String item;
 
   @ManyToOne(fetch = FetchType.EAGER)
-  @JoinColumn(name = "ID")
+  @JoinColumn(name = "ID", insertable=false, updatable=false)
   private Ticket ticket;
 }

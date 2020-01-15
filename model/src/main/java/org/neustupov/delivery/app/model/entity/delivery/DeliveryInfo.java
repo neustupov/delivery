@@ -28,5 +28,6 @@ public class DeliveryInfo extends AbstractEntity {
   @Column(nullable=false, name="DELIVERY_TIME")
   private LocalDateTime deliveryTime;
 
+  @Embedded
   private Address address;
 }

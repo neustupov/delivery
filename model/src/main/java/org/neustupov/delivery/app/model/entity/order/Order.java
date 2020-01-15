@@ -19,7 +19,7 @@ import org.neustupov.delivery.app.model.entity.delivery.DeliveryInfo;
 
 @Data
 @Entity
-@Table(name = "ORDER")
+@Table(name = "ORDERS")
 @EqualsAndHashCode(callSuper=true)
 public class Order extends AbstractEntity {
 

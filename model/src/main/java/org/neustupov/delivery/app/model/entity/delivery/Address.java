@@ -5,16 +5,12 @@ import javax.persistence.Embeddable;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 
 @Getter
 @Setter
 @EqualsAndHashCode
 @Embeddable
 public class Address {
-
-  public Address() {
-  }
 
   @Column(name = "STREET", length = 32)
   private String street;

@@ -1,6 +1,7 @@
 package org.neustupov.delivery.app.service.restaurant;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import org.neustupov.delivery.app.model.entity.restaurant.Restaurant;
 import org.neustupov.delivery.app.repository.restaurant.RestaurantRepository;
@@ -20,6 +21,7 @@ public class RestaurantService {
   }
 
   public List<Restaurant> findAll(){
+    restaurantRepository.save(new Restaurant("Ararat", 1L, new HashSet<>()));
     List<Restaurant> restList = new ArrayList<>();
     restaurantRepository.findAll().forEach(restList::add);
     return restList;

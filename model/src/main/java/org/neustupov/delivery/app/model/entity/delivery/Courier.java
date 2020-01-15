@@ -17,5 +17,6 @@ public class Courier extends AbstractEntity {
   @Column(nullable=false, name="AVAILABLE")
   private boolean available;
 
+  @Embedded
   private Location location;
 }

@@ -45,7 +45,7 @@ public class RestaurantRepositoryImpl implements RestaurantRepository {
 
   @Override
   public Iterable<Restaurant> findAll() {
-    return Arrays.asList(new Restaurant("Ararat", 1L, new HashSet<>()));
+    return restaurantRepository.findAll();
   }
 
   @Override
