@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("restaurants")
 public class RestaurantController {
 
   @Lazy
   @Autowired
   private RestaurantService restaurantService;
 
-  @GetMapping(value = "restaurants", produces = "application/json")
+  @GetMapping(value = "/", produces = "application/json")
   public List<Restaurant> getAllRestaurants(){
     return restaurantService.findAll();
   }

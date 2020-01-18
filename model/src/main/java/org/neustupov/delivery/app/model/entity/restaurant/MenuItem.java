@@ -27,4 +27,9 @@ public class MenuItem extends AbstractEntity {
   @ManyToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "ID", insertable=false, updatable=false)
   private Restaurant restaurant;
+
+  public MenuItem(String name, int price) {
+    this.name = name;
+    this.price = price;
+  }
 }
