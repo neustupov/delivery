@@ -8,12 +8,16 @@ import java.util.List;
 import org.neustupov.delivery.app.model.entity.restaurant.MenuItem;
 import org.neustupov.delivery.app.model.entity.restaurant.Restaurant;
 import org.neustupov.delivery.app.repository.restaurant.RestaurantRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 @Service
 public class RestaurantService {
+
+  private static final Logger logger = LoggerFactory.getLogger(RestaurantService.class);
 
   @Lazy
   @Autowired
@@ -24,6 +28,8 @@ public class RestaurantService {
   }
 
   public List<Restaurant> findAll(){
+    logger.info("Get all restaurants GET method");
+
     HashSet<MenuItem> lineItems = new HashSet<>();
     MenuItem menuItem = new MenuItem("vine", 100);
     menuItem.setCreatedAt(now());
