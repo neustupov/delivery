@@ -1,5 +1,7 @@
 package org.neustupov.delivery.app.model.entity.kitchen;
 
+import static java.time.LocalDateTime.now;
+
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -46,8 +48,20 @@ public class Ticket extends AbstractEntity {
   @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "ticket", orphanRemoval = true)
   private Set<TicketLineItem> ticketLineItems;
 
-  public static Ticket create(Long id, TicketDetails details){
-    return new Ticket(id, details);
+  public Ticket(TicketDetails details) {
+    this.status = Status.CREATED;
+    this.state = details.getTicketState();
+    this.restaurantId = details.getRestaurantId();
+    this.requestedDeliveryTime = details.getRequestedDeliveryTime();
+    this.preparedByTime = details.getPreparedByTime();
+    this.acceptTime = now();
+    this.pickedUpTime = details.getPickedUpTime();
+    this.readyForPickUpTime = details.getReadyForPickUpTime();
+    this.ticketLineItems = details.getTicketLineItems();
+  }
+
+  public static Ticket create(TicketDetails details){
+    return new Ticket(details);
   }
 
   public void addTicket(TicketLineItem ticketLineItem){
