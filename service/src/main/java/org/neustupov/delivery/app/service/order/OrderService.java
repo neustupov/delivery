@@ -21,6 +21,10 @@ public class OrderService {
 
   }
 
+  public Order reviseOrder(){
+
+  }
+
   public Order approveOrder(){}
 
   public Order rejectOrder(){}

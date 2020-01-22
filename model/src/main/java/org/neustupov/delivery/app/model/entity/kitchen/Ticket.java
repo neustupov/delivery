@@ -19,7 +19,7 @@ import org.neustupov.delivery.app.model.entity.common.Status;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "TICKET")
+@Table(name = "TICKETS")
 @EqualsAndHashCode(callSuper = true)
 public class Ticket extends AbstractEntity {
 
@@ -27,14 +27,28 @@ public class Ticket extends AbstractEntity {
   @Column(nullable=false, name="STATUS")
   private Status status;
 
+  private TicketState state;
+
+  private Long restaurantId;
+
   @Column(nullable=false, name="REQUESTED_DELIVERY_TIME")
   private LocalDateTime requestedDeliveryTime;
 
   @Column(nullable=false, name="PREPARED_BY_TIME")
   private LocalDateTime preparedByTime;
 
+  private LocalDateTime acceptTime;
+
+  private LocalDateTime pickedUpTime;
+
+  private LocalDateTime readyForPickUpTime;
+
   @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "ticket", orphanRemoval = true)
   private Set<TicketLineItem> ticketLineItems;
+
+  public static Ticket create(Long id, TicketDetails details){
+    return new Ticket(id, details);
+  }
 
   public void addTicket(TicketLineItem ticketLineItem){
     if(ticketLineItems == null){
