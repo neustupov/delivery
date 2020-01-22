@@ -11,4 +11,16 @@ public class ConsumerService {
   @Lazy
   @Autowired
   private ConsumerRepository consumerRepository;
+
+  public boolean verifyConsumerDetails(){
+
+  }
+
+  public boolean validateConsumerInfo(){
+
+  }
+
+  public boolean authorizeCard(){
+
+  }
 }

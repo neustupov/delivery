@@ -42,4 +42,16 @@ public class RestaurantService {
     restaurantRepository.findAll().forEach(restList::add);
     return restList;
   }
+
+  public boolean verifyOrderDetails(){
+
+  }
+
+  public boolean verifyConsumerDetails(){
+
+  }
+
+  public Restaurant findAvailableRestaurant(){
+
+  }
 }

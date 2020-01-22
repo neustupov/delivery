@@ -13,7 +13,19 @@ public class OrderService {
   @Autowired
   private OrderRepository orderRepository;
 
-  public Order saveOrder(Order order){
+  public Order createOrder(Order order){
     return orderRepository.save(order);
+  }
+
+  public Order updateOrder(){
+
+  }
+
+  public Order approveOrder(){}
+
+  public Order rejectOrder(){}
+
+  public Order validateOrderDetails(){
+
   }
 }

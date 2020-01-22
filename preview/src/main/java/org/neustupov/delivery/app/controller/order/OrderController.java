@@ -35,6 +35,6 @@ public class OrderController {
 
     logger.info("Order " + order + " created");
 
-    return ResponseEntity.ok(orderService.saveOrder(order));
+    return ResponseEntity.ok(orderService.createOrder(order));
   }
 }
