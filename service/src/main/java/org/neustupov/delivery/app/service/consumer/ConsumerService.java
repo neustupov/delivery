@@ -13,14 +13,14 @@ public class ConsumerService {
   private ConsumerRepository consumerRepository;
 
   public boolean verifyConsumerDetails(){
-
+    return true;
   }
 
   public boolean validateConsumerInfo(){
-
+    return true;
   }
 
   public boolean authorizeCard(){
-
+    return true;
   }
 }

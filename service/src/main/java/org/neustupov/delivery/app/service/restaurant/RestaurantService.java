@@ -44,14 +44,14 @@ public class RestaurantService {
   }
 
   public boolean verifyOrderDetails(){
-
+    return true;
   }
 
   public boolean verifyConsumerDetails(){
-
+    return true;
   }
 
   public Restaurant findAvailableRestaurant(){
-
+    return restaurantRepository.findAll().get(0);
   }
 }
