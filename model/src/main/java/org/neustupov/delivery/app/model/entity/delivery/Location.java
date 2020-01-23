@@ -1,17 +1,18 @@
 package org.neustupov.delivery.app.model.entity.delivery;
 
-import javax.persistence.Entity;
-import javax.persistence.MappedSuperclass;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@Entity
-@MappedSuperclass
-@EqualsAndHashCode(callSuper=true)
-public class Location extends AbstractEntity {
+@Getter
+@Setter
+@Embeddable
+public class Location {
 
+  @Column(nullable=false, name="LAT")
   private String lat;
+
+  @Column(nullable=false, name="LON")
   private String ion;
 }
