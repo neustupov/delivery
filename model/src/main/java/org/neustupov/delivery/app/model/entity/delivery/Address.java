@@ -8,8 +8,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@EqualsAndHashCode
 @Embeddable
+@EqualsAndHashCode
 public class Address {
 
   @Column(name = "STREET", length = 32)

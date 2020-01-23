@@ -3,6 +3,7 @@ package org.neustupov.delivery.app.model.entity.order;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
@@ -41,6 +42,6 @@ public class Order extends AbstractEntity {
   @JoinColumn(name = "DELIVERY_INFO")
   private DeliveryInfo deliveryInfo;
 
-  @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "order", orphanRemoval = true)
+  @ElementCollection
   private Set<OrderLineItem> orderLineItems;
 }

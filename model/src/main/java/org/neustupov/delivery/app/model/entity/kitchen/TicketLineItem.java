@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "TICKET_LINE_ITEM")
 @EqualsAndHashCode(callSuper = true)
 public class TicketLineItem extends AbstractEntity {

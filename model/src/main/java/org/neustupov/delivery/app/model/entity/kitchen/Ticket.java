@@ -5,13 +5,11 @@ import static java.time.LocalDateTime.now;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -20,8 +18,8 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 import org.neustupov.delivery.app.model.entity.common.Status;
 
 @Data
-@NoArgsConstructor
 @Entity
+@NoArgsConstructor
 @Table(name = "TICKETS")
 @EqualsAndHashCode(callSuper = true)
 public class Ticket extends AbstractEntity {
@@ -47,7 +45,7 @@ public class Ticket extends AbstractEntity {
 
   private LocalDateTime readyForPickUpTime;
 
-  @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "ticket", orphanRemoval = true)
+  @ElementCollection
   private Set<TicketLineItem> ticketLineItems;
 
   public Ticket(TicketDetails details) {

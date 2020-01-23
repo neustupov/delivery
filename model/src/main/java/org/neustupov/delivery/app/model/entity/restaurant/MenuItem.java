@@ -12,8 +12,8 @@ import lombok.EqualsAndHashCode;
 import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 
 @Data
-@AllArgsConstructor
 @Entity
+@AllArgsConstructor
 @Table(name = "MENU_ITEM")
 @EqualsAndHashCode(callSuper=true)
 public class MenuItem extends AbstractEntity {
@@ -24,7 +24,7 @@ public class MenuItem extends AbstractEntity {
   @Column(nullable=false, name="PRICE")
   private int price;
 
-  @ManyToOne(fetch = FetchType.EAGER)
+  @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "ID", insertable=false, updatable=false)
   private Restaurant restaurant;
 

@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
@@ -15,9 +16,9 @@ import lombok.NoArgsConstructor;
 import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 
 @Data
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 @Table(name = "RESTAURANTS")
 @EqualsAndHashCode(callSuper=true)
 public class Restaurant extends AbstractEntity {
@@ -28,7 +29,7 @@ public class Restaurant extends AbstractEntity {
   @Column(nullable=false, name="ADDRESS_ID")
   private Long addressId;
 
-  @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "restaurant", orphanRemoval = true)
+  @ElementCollection
   private Set<MenuItem> menuItems;
 
   public void addMenuItem(MenuItem menuItem){

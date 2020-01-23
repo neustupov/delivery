@@ -11,9 +11,9 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 import org.neustupov.delivery.app.model.entity.delivery.DeliveryInfo;
 
 @Data
-@EqualsAndHashCode(callSuper=true)
 @Entity
 @Table(name = "CONSUMER")
+@EqualsAndHashCode(callSuper=true)
 public class Consumer extends AbstractEntity {
 
   @OneToOne(fetch = FetchType.LAZY)
