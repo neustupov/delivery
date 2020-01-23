@@ -18,7 +18,7 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 @EqualsAndHashCode(callSuper=true)
 public class DeliveryInfo extends AbstractEntity {
 
-  @Column(nullable=false, name="BANK")
+  @Column(nullable=false)
   private Long consumerId;
 
   @OneToOne(fetch = FetchType.LAZY)

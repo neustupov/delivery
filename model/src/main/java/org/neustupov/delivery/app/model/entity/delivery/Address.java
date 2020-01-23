@@ -12,13 +12,13 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Address {
 
-  @Column(name = "STREET", length = 32)
+  @Column(length = 32)
   private String street;
 
-  @Column(name = "CITY", length = 32)
+  @Column(length = 32)
   private String city;
 
-  @Column(name = "STATE", length = 32)
+  @Column(length = 32)
   private String state;
 
   @Column(name = "ZIP_CODE", length = 10)

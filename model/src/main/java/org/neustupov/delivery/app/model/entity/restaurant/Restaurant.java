@@ -23,7 +23,7 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 @EqualsAndHashCode(callSuper=true)
 public class Restaurant extends AbstractEntity {
 
-  @Column(nullable=false, name="NAME")
+  @Column(nullable=false)
   private String name;
 
   @Column(nullable=false, name="ADDRESS_ID")

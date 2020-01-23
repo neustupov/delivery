@@ -10,9 +10,9 @@ import lombok.Setter;
 @Embeddable
 public class Location {
 
-  @Column(nullable=false, name="LAT")
+  @Column(nullable=false)
   private String lat;
 
-  @Column(nullable=false, name="LON")
+  @Column(nullable=false)
   private String ion;
 }

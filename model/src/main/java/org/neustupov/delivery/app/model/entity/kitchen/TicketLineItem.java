@@ -20,10 +20,10 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 @EqualsAndHashCode(callSuper = true)
 public class TicketLineItem extends AbstractEntity {
 
-  @Column(nullable=false, name="QUANTITY")
+  @Column(nullable=false)
   private int quantity;
 
-  @Column(nullable=false, name="ITEM")
+  @Column(nullable=false)
   private String item;
 
   @ManyToOne(fetch = FetchType.LAZY)

@@ -25,7 +25,7 @@ import org.neustupov.delivery.app.model.entity.delivery.DeliveryInfo;
 public class Order extends AbstractEntity {
 
   @Enumerated
-  @Column(nullable=false, name="STATUS")
+  @Column(nullable=false)
   private Status status;
 
   @Column(nullable=false, name="CONSUMER_ID")

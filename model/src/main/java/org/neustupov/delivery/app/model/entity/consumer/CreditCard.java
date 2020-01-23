@@ -14,10 +14,10 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 @EqualsAndHashCode(callSuper = true)
 public class CreditCard extends AbstractEntity {
 
-  @Column(nullable=false, name="BANK")
+  @Column(nullable=false)
   private String bank;
 
-  @Column(nullable=false, name="NUMBER")
+  @Column(nullable=false)
   private int number;
 
   @Column(nullable=false, name="HOLDER_NAME")
@@ -26,6 +26,6 @@ public class CreditCard extends AbstractEntity {
   @Column(nullable=false, name="HOLDER_SURNAME")
   private String holderSurname;
 
-  @Column(nullable=false, name="DATE")
+  @Column(nullable=false)
   private Date date;
 }

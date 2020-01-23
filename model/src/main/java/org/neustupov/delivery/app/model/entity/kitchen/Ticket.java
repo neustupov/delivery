@@ -25,7 +25,7 @@ import org.neustupov.delivery.app.model.entity.common.Status;
 public class Ticket extends AbstractEntity {
 
   @Enumerated
-  @Column(nullable=false, name="STATUS")
+  @Column(nullable=false)
   private Status status;
 
   @Embedded
@@ -39,10 +39,13 @@ public class Ticket extends AbstractEntity {
   @Column(nullable=false, name="PREPARED_BY_TIME")
   private LocalDateTime preparedByTime;
 
+  @Column(nullable=false, name="ACCEPT_TIME")
   private LocalDateTime acceptTime;
 
+  @Column(nullable=false, name="PICKED_UP_TIME")
   private LocalDateTime pickedUpTime;
 
+  @Column(nullable=false, name="READY_FOR_PICK_UP_TIME")
   private LocalDateTime readyForPickUpTime;
 
   @ElementCollection

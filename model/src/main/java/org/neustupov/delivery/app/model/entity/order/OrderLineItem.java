@@ -16,10 +16,10 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 @EqualsAndHashCode(callSuper=true)
 public class OrderLineItem extends AbstractEntity {
 
-  @Column(nullable=false, name="QUANTITY")
+  @Column(nullable=false)
   private int quantity;
 
-  @Column(nullable=false, name="NAME")
+  @Column(nullable=false)
   private String name;
 
   @ManyToOne(fetch = FetchType.LAZY)

@@ -9,19 +9,21 @@ import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 
 @Data
 @Entity
+@NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "MENU_ITEM")
 @EqualsAndHashCode(callSuper=true)
 public class MenuItem extends AbstractEntity {
 
-  @Column(nullable=false, name="NAME")
+  @Column(nullable=false)
   private String name;
 
-  @Column(nullable=false, name="PRICE")
+  @Column(nullable=false)
   private int price;
 
   @ManyToOne(fetch = FetchType.LAZY)

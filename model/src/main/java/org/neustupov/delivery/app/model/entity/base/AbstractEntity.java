@@ -23,7 +23,6 @@ public abstract class AbstractEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "ID")
   private Long id;
 
   @Column(name = "CREATED_AT", nullable = false, updatable = false)
