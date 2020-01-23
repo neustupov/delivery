@@ -14,7 +14,7 @@ public class DeliveryService {
   private DeliveryRepository deliveryRepository;
 
   public DeliveryInfo sheduleDelivery(){
-
+    return new DeliveryInfo();
   }
 
   public void noteUpdatedLocation(){

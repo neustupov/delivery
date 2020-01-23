@@ -18,18 +18,22 @@ public class OrderService {
   }
 
   public Order updateOrder(){
-
+    return new Order();
   }
 
   public Order reviseOrder(){
-
+    return new Order();
   }
 
-  public Order approveOrder(){}
+  public Order approveOrder(){
+    return new Order();
+  }
 
-  public Order rejectOrder(){}
+  public Order rejectOrder(){
+    return new Order();
+  }
 
   public Order validateOrderDetails(){
-
+    return new Order();
   }
 }

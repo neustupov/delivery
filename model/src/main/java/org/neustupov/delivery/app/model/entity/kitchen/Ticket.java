@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
@@ -29,6 +30,7 @@ public class Ticket extends AbstractEntity {
   @Column(nullable=false, name="STATUS")
   private Status status;
 
+  @Embedded
   private TicketState state;
 
   private Long restaurantId;
