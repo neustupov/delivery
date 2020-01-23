@@ -1,0 +1,2 @@
+--CREATE TABLE 'restaurants'  IF NOT EXISTS;
+--INSERT INTO restaurant(name, addressId) VALUES('Bratislava', 1L);

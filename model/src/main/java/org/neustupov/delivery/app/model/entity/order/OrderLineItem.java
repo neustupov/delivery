@@ -23,6 +23,6 @@ public class OrderLineItem extends AbstractEntity {
   private String name;
 
   @ManyToOne(fetch = FetchType.EAGER)
-  @JoinColumn(name = "ID")
+  @JoinColumn(name = "ID", insertable=false, updatable=false)
   private Order order;
 }

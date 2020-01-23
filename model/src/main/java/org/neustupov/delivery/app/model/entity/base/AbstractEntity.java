@@ -11,9 +11,12 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToOne;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import org.neustupov.delivery.app.model.entity.consumer.Consumer;
 
-@Data
+@Getter
+@Setter
 @EqualsAndHashCode
 @MappedSuperclass
 public abstract class AbstractEntity {

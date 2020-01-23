@@ -2,10 +2,12 @@ package org.neustupov.delivery.app.model.entity.delivery;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @EqualsAndHashCode
 @Embeddable
 public class Address {
