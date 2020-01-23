@@ -18,7 +18,7 @@ import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "RESTAURANT")
+@Table(name = "RESTAURANTS")
 @EqualsAndHashCode(callSuper=true)
 public class Restaurant extends AbstractEntity {
 

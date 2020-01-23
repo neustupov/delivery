@@ -2,8 +2,11 @@ package org.neustupov.delivery.app.model.entity.kitchen;
 
 import java.time.LocalDateTime;
 import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import lombok.Data;
 import org.neustupov.delivery.app.model.entity.base.AbstractEntity;
 
@@ -18,5 +21,6 @@ public class TicketDetails extends AbstractEntity {
   private LocalDateTime preparedByTime;
   private LocalDateTime pickedUpTime;
   private LocalDateTime readyForPickUpTime;
+  @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "ticketLineItem", orphanRemoval = true)
   private Set<TicketLineItem> ticketLineItems;
 }
